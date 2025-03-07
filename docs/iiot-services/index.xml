@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Smart Manufacturing IIoT Services on Network Slicing for IIoT</title><link>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/</link><description>Recent content in Smart Manufacturing IIoT Services on Network Slicing for IIoT</description><generator>Hugo</generator><language>en</language><atom:link href="https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/index.xml" rel="self" type="application/rss+xml"/><item><title>Requirements and architecture</title><link>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/requirements-and-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/requirements-and-architecture/</guid><description>&lt;h1 id="network-slicing-requirements-and-architecture-for-smart-manufacturing-scenarios">
+ Network slicing requirements and architecture for smart manufacturing scenarios.
+ &lt;a class="anchor" href="#network-slicing-requirements-and-architecture-for-smart-manufacturing-scenarios">#&lt;/a>
+&lt;/h1>
+&lt;ul>
+&lt;li>Smart factories are a key component of Industry 4.0, leveraging machine and sensor data to optimize manufacturing through real-time feedback.&lt;/li>
+&lt;li>Network slicing enhances smart factory networks by creating virtual, isolated networks that support diverse industrial use cases with different QoS needs.&lt;/li>
+&lt;li>However, there is a lack of research on designing and managing network slices specifically for smart factories, which must account for unique network architectures, resource types, and strict business demands.&lt;/li>
+&lt;li>Research efforts from groups like 5G-ACIA and 3GPP have defined smart factory use cases for 5G network slicing, including manufacturing control, production monitoring, automation, and maintenance, each with varying data, reliability, and latency requirements.&lt;/li>
+&lt;/ul>
+&lt;h2 id="smart-factory-service-requirements">
+ Smart factory service requirements
+ &lt;a class="anchor" href="#smart-factory-service-requirements">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Smart factory automation falls under 5G&amp;rsquo;s URLLC service category, requiring high reliability, low latency, and determinism. However, not all applications demand these extreme capabilities.&lt;/li>
+&lt;li>Some, like surveillance cameras and customer support, need high data rates but can tolerate higher latency, while manufacturing and IIoT require support for many concurrent connections.&lt;/li>
+&lt;li>Smart factory services must integrate all three 5G slice types: eMBB, mMTC, and URLLC.&lt;/li>
+&lt;li>Network slicing enables the division of smart factory infrastructure into multiple virtual networks, each optimized for specific applications. However, current slicing approaches mainly focus on bandwidth and throughput, highlighting the need for better support of time-sensitive smart factory applications.&lt;/li>
+&lt;li>The next section categorizes smart factory use cases based on their requirements.&lt;/li>
+&lt;/ul>
+&lt;h2 id="use-cases-of-smart-factory">
+ Use cases of smart factory
+ &lt;a class="anchor" href="#use-cases-of-smart-factory">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>3GPP technical specification group has identified five general types of smart factory use cases, including factory automation, human-machine interaction (HMI), process automation, logistics and warehousing, and monitoring and maintenance.&lt;/li>
+&lt;/ul>
+&lt;h3 id="factory-automation">
+ Factory automation
+ &lt;a class="anchor" href="#factory-automation">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Manages complex processes like control automation, process monitoring, and optimization.&lt;/li>
+&lt;li>Requires low-latency, highly available, and deterministic communication networks.&lt;/li>
+&lt;li>Modular production systems are replacing static ones, increasing demand for wireless communication and localization services.&lt;/li>
+&lt;/ul>
+&lt;h3 id="hmis-and-production-it">
+ HMIs and production IT
+ &lt;a class="anchor" href="#hmis-and-production-it">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Includes human-machine interfaces (HMIs) like control panels and IT systems such as MES and ERP.&lt;/li>
+&lt;li>Augmented Reality (AR) and Virtual Reality (VR) are expected to enhance human-plant interactions.&lt;/li>
+&lt;li>Requires real-time data streaming for decision-making and process management.&lt;/li>
+&lt;/ul>
+&lt;h3 id="process-automation">
+ Process automation
+ &lt;a class="anchor" href="#process-automation">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Manages production control and substance handling in industries like chemicals, food, and pulp.&lt;/li>
+&lt;li>Involves thousands of sensors measuring environmental factors and controlling actuators in closed-loop systems.&lt;/li>
+&lt;li>Systems can be distributed across large areas, requiring reliable communication and coordination.&lt;/li>
+&lt;/ul>
+&lt;h3 id="logistics-and-warehousing">
+ Logistics and warehousing
+ &lt;a class="anchor" href="#logistics-and-warehousing">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Ensures uninterrupted supply of raw materials using mobile robots and AGVs.&lt;/li>
+&lt;li>Warehouses are becoming more automated with conveyors, cranes, and ASRS.&lt;/li>
+&lt;li>Requires precise localization, tracking, and real-time monitoring of assets.&lt;/li>
+&lt;/ul>
+&lt;h3 id="monitoring-and-maintenance">
+ Monitoring and maintenance
+ &lt;a class="anchor" href="#monitoring-and-maintenance">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Focuses on process and asset monitoring without immediate real-time control.&lt;/li>
+&lt;li>Includes predictive maintenance and big data analytics for optimizing operations.&lt;/li>
+&lt;li>Not latency-critical but requires efficient handling of large-scale sensor data.&lt;/li>
+&lt;/ul>
+&lt;h3 id="conclusions">
+ Conclusions
+ &lt;a class="anchor" href="#conclusions">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Smart factory use cases have different network slicing demands&lt;/strong> based on reliability, bandwidth, latency, scalability, and serviceability.&lt;/li>
+&lt;li>&lt;strong>Three types of network slices&lt;/strong> are defined based on traffic characteristics: deterministic periodic slices, deterministic aperiodic slices and non-deterministic slices.&lt;/li>
+&lt;li>&lt;strong>Deterministic periodic slices are the most critical&lt;/strong> as they require bounded latency for real-time industrial applications.&lt;/li>
+&lt;/ul>
+&lt;h4 id="deterministic-periodic-slices">
+ Deterministic periodic slices
+ &lt;a class="anchor" href="#deterministic-periodic-slices">#&lt;/a>
+&lt;/h4>
+&lt;p>Generates traffic at regular intervals with strict latency requirements (e.g., motion control, sensor monitoring).&lt;/p></description></item><item><title>Network slice orchestration and management</title><link>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/network-slicing-orchestration-and-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/network-slicing-orchestration-and-management/</guid><description>&lt;h1 id="network-slice-orchestration-and-management">
+ Network slice orchestration and management
+ &lt;a class="anchor" href="#network-slice-orchestration-and-management">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="network-slicing-architecture">
+ Network slicing architecture
+ &lt;a class="anchor" href="#network-slicing-architecture">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="network-slicing-management">
+ Network slicing management
+ &lt;a class="anchor" href="#network-slicing-management">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="cross-domain-network-slicing-orchestration">
+ Cross-domain network slicing orchestration
+ &lt;a class="anchor" href="#cross-domain-network-slicing-orchestration">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="network-slice-management-model">
+ Network slice management model
+ &lt;a class="anchor" href="#network-slice-management-model">#&lt;/a>
+&lt;/h2></description></item><item><title>Challenges and open issues</title><link>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/challenges-and-open-issues/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/challenges-and-open-issues/</guid><description>&lt;h1 id="challenges-and-open-issues">
+ Challenges and open issues
+ &lt;a class="anchor" href="#challenges-and-open-issues">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="transport-networks-for-industrial-network-slices">
+ Transport networks for industrial network slices
+ &lt;a class="anchor" href="#transport-networks-for-industrial-network-slices">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="implementation-and-feasibility">
+ Implementation and feasibility
+ &lt;a class="anchor" href="#implementation-and-feasibility">#&lt;/a>
+&lt;/h2></description></item><item><title>Discussion and remarks</title><link>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/discussions-and-remarks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://raidantimosquitos.github.io/network-slicing-iot/docs/iiot-services/discussions-and-remarks/</guid><description>&lt;h1 id="discussion-and-remarks">
+ Discussion and remarks
+ &lt;a class="anchor" href="#discussion-and-remarks">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="computational-complexity-and-resource-availability">
+ Computational complexity and resource availability
+ &lt;a class="anchor" href="#computational-complexity-and-resource-availability">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="datasets-and-simulators">
+ Datasets and simulators
+ &lt;a class="anchor" href="#datasets-and-simulators">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="performance-evaluation-and-benchmarks">
+ Performance evaluation and benchmarks
+ &lt;a class="anchor" href="#performance-evaluation-and-benchmarks">#&lt;/a>
+&lt;/h2>
+&lt;h2 id="future-research-directions">
+ Future research directions
+ &lt;a class="anchor" href="#future-research-directions">#&lt;/a>
+&lt;/h2></description></item></channel></rss>

@@ -1,0 +1,15 @@
+{
+  "name": "Network Slicing for IIoT",
+  "short_name": "Network Slicing for IIoT",
+  "start_url": "/network-slicing-iot/",
+  "scope": "/network-slicing-iot/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/network-slicing-iot/favicon.svg",
+      "sizes": "512x512"
+    }
+  ]
+}
