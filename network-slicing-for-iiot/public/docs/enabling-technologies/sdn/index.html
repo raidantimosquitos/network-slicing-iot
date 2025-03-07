@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head><script src="/network-slicing-iot/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=network-slicing-iot/livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="
+  Software-defined Networking (SDN)
+  #
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/network-slicing-iot/docs/enabling-technologies/sdn/">
+  <meta property="og:site_name" content="Network Slicing for IIoT">
+  <meta property="og:title" content="Software-defined Networking (SDN)">
+  <meta property="og:description" content="Software-defined Networking (SDN) #">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+    <meta property="article:modified_time" content="2025-02-20T16:28:24+08:00">
+<title>Software-defined Networking (SDN) | Network Slicing for IIoT</title>
+<link rel="icon" href="/network-slicing-iot/favicon.png" >
+<link rel="manifest" href="/network-slicing-iot/manifest.json">
+<link rel="canonical" href="http://localhost:1313/network-slicing-iot/docs/enabling-technologies/sdn/">
+<link rel="stylesheet" href="/network-slicing-iot/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
+  <script defer src="/network-slicing-iot/fuse.min.js"></script>
+  <script defer src="/network-slicing-iot/en.search.min.f89fd67a3f1bf738569ce8b2bc4e584c6e1d26c0d374776ae155934ee9d2b00b.js" integrity="sha256-&#43;J/Wej8b9zhWnOiyvE5YTG4dJsDTdHdq4VWTTunSsAs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/network-slicing-iot/"><span>Network Slicing for IIoT</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-b8d16d76605ad98dffae12b758ff9a65" class="toggle"  />
+    <label for="section-b8d16d76605ad98dffae12b758ff9a65" class="flex justify-between">
+      <a href="/network-slicing-iot/docs/iiot-services/" class="">Smart Manufacturing IIoT Services</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/iiot-services/requirements-and-architecture/" class="">Requirements and architecture</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/iiot-services/network-slicing-orchestration-and-management/" class="">Network slice orchestration and management</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/iiot-services/challenges-and-open-issues/" class="">Challenges and open issues</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/iiot-services/discussions-and-remarks/" class="">Discussion and remarks</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-eb805e50d6cdf4198ef66b6e1dc352fa" class="toggle" checked />
+    <label for="section-eb805e50d6cdf4198ef66b6e1dc352fa" class="flex justify-between">
+      <a href="/network-slicing-iot/docs/enabling-technologies/" class="">Enabling Technologies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/enabling-technologies/nfv/" class="">Network Function Virtualization (NFV)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/enabling-technologies/sdn/" class="active">Software-defined Networking (SDN)</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/enabling-technologies/virtualization-and-containerization/" class="">Containerization and virtualization</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/network-slicing-iot/docs/enabling-technologies/cloud-and-edge/" class="">Cloud and Edge Computing</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/raidantimosquitos/network-slicing-iot"  target="_blank" rel="noopener">
+        GitHub
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/network-slicing-iot/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Software-defined Networking (SDN)</h3>
+
+  <label for="toc-control">
+    
+    <img src="/network-slicing-iot/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="software-defined-networking-sdn">
+  Software-defined Networking (SDN)
+  <a class="anchor" href="#software-defined-networking-sdn">#</a>
+</h1>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+  <div><a class="flex align-center" href="https://github.com/raidantimosquitos/network-slicing-iot/commit/934e92957ed7b1c966738293d7399734c18b0bc6" title='Last modified by raidantimosquitos | Feb 20, 2025' target="_blank" rel="noopener">
+      <img src="/network-slicing-iot/svg/calendar.svg" class="book-icon" alt="" />
+      <span>Feb 20, 2025</span>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+
+
+
+
