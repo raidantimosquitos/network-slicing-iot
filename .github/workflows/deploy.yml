@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages from gh-deployment-workflow branch
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DEPLOY_DIR: webiste
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Setup Git config
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.DEPLOY_DIR }}
+          path: ${{ github.workspace }}/${{ env.DEPLOY_DIR }}/
+
+      - name: Checkout gh-deployment-workflow branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-deployment-workflow
+
+      - name: Clear site files and re-create directory
+        run: |
+          git rm -rf "$DEPLOY_DIR"
+          mkdir -p "$DEPLOY_DIR"
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.DEPLOY_DIR }}
+          path: ${{ env.DEPLOY_DIR }}/
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
+          git push origin gh-deployment-workflow
